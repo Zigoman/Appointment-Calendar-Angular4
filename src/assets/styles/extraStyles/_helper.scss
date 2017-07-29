@@ -1,0 +1,28 @@
+$htmlDirection: ltr;
+// Base spacing
+
+@import 'brand';
+
+@function htmlDirection() {
+  @if ($htmlDirection == ltr) {
+    @return left;
+  } @else {
+    @return right;
+  }
+}
+
+@function htmlDirection-rev() {
+  @if ($htmlDirection == ltr) {
+    @return right;
+  } @else {
+    @return left;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px !important;
+}

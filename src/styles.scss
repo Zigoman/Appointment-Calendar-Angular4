@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/styles/extraStyles/reset";
+@import "assets/styles/extraStyles/helper";
+
+@import "assets/styles/extraStyles/brand";
+@import "assets/styles/sprite";
+@import "assets/styles/icons";
+@import "assets/styles/extraStyles/fonts";
+
+@import "assets/styles/mixins/mixins";

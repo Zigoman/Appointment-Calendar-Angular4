@@ -1,0 +1,54 @@
+$icons-startup: "\ea01";
+
+@font-face {
+    font-family: icons;
+    src: url("assets/fonts/icons.eot");
+    src: url("assets/fonts/icons.eot?#iefix") format("embedded-opentype"), url("assets/fonts/icons.woff2") format("woff2"), url("assets/fonts/icons.woff") format("woff"), url("assets/fonts/icons.ttf") format("truetype"), url("assets/fonts/icons.svg#icons") format("svg");
+    font-style: normal;
+    font-weight: 400;
+}
+
+%icons {
+    display: inline-block;
+    transform: translate(0, 0);
+    text-rendering: auto;
+    font: normal normal 400 14px/1 icons;
+    font-size: inherit;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+.icons {
+    @extend %icons;
+}
+
+.icons-lg {
+    vertical-align: -15%;
+    line-height: 0.75em;
+    font-size: 1.33333333em;
+}
+
+.icons-2x {
+    font-size: 2em;
+}
+
+.icons-3x {
+    font-size: 3em;
+}
+
+.icons-4x {
+    font-size: 4em;
+}
+
+.icons-5x {
+    font-size: 5em;
+}
+
+.icons-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+
+.icons-startup::before {
+    content: "\ea01";
+}

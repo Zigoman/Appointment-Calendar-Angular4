@@ -1,0 +1,42 @@
+import {Injectable} from "@angular/core";
+import {applyMiddleware, combineReducers, compose, createStore} from "redux";
+import {todosReducer} from "./reducers/todos.reducer";
+import {environment} from "../../environments/environment";
+import {todosMiddleware} from "./middlewares/todos.middleware";
+import {usersReducer} from "./reducers/users.reducer";
+import {usersMiddleware} from "./middlewares/users.middleware";
+
+let composeEnhancers;
+if(!environment.production) {
+  composeEnhancers = window['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'] || compose;
+} else {
+  composeEnhancers = compose;
+}
+@Injectable()
+export class Store {
+
+  private store: any;
+
+  constructor(todosMiddleware :todosMiddleware, usersMiddleware: usersMiddleware) {
+    this.store = createStore(
+      combineReducers({
+        todos: todosReducer,
+        users: usersReducer
+      }),
+      composeEnhancers(applyMiddleware(todosMiddleware.call, usersMiddleware.call)),
+    );
+  }
+
+  dispach(action: any){
+return this.store.dispatch(action);
+  }
+
+  subscribe(cb){
+    return this.store.subscribe(cb);
+  }
+
+  getState(){
+    return this.store.getState();
+  }
+
+}
