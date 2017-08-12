@@ -20,13 +20,12 @@ export class LoginComponent implements OnInit {
     this.auth = auth;
 
     this.form = new FormGroup({
-      company: new FormControl('', [Validators.minLength(4), Validators.required, MyValidator]),
-      email: new FormControl('', [Validators.minLength(5), CheckEmail])
+   /*   company: new FormControl('', [Validators.minLength(4), Validators.required, MyValidator]),
+      email: new FormControl('', [Validators.minLength(5), CheckEmail])*/
     });
   }
 
   submit() {
-    console.log('this.form',this.form.controls.name);
     this.router.navigate(['app'])
   }
   ngOnInit() {
