@@ -2,7 +2,7 @@
 
 <form [formGroup]="form" (ngSubmit)="submit(form)">
 
-  <div class="form-group">
+<!--  <div class="form-group">
     <label>Company</label>
     <select class="form-control" formControlName="company">
       <option value="volvo">Volvo</option>
@@ -21,7 +21,7 @@
     <sub
       *ngIf="form.controls.email?.dirty && form.controls.email?.invalid && form.controls.email?.touched">
       {{form.controls.email?.errors | json}}</sub>
-  </div>
+  </div>-->
 
   <div class="form-group">
     <button type="submit" class="btn btn-primary">Register</button>
