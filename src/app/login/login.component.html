@@ -1,0 +1,34 @@
+<h2>SignUp</h2>
+
+<form [formGroup]="form" (ngSubmit)="submit(form)">
+
+  <div class="form-group">
+    <label>Company</label>
+    <select class="form-control" formControlName="company">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="opel">Opel</option>
+      <option value="audi">Audi</option>
+    </select>
+    <sub
+      *ngIf="form.controls.company?.dirty && form.controls.company?.invalid && form.controls.company?.touched">{{form.controls.company?.errors
+      | json}}</sub>
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control" formControlName="email"/>
+    <sub
+      *ngIf="form.controls.email?.dirty && form.controls.email?.invalid && form.controls.email?.touched">
+      {{form.controls.email?.errors | json}}</sub>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Register</button>
+    <button type="reset" class="btn btn-link">Cancel</button>
+  </div>
+
+</form>
+
+
+<pre>{{form.value | json}}</pre>
