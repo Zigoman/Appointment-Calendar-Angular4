@@ -11,7 +11,7 @@ import {CheckEmail, MyValidator} from '../shared/form.validators';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  private form: FormGroup;
+  public form: FormGroup;
   public http: Http;
   public auth: any;
 
