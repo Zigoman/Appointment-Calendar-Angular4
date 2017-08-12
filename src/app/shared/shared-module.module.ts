@@ -1,7 +1,10 @@
 import {NgModule} from "@angular/core";
+import {AuthService} from './services/auth/auth.service';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   imports: [
+    CommonModule
   ],
   declarations: [
 
@@ -10,7 +13,7 @@ import {NgModule} from "@angular/core";
 
   ],
   providers: [
-
+    AuthService
   ]
 })
 

@@ -15,7 +15,8 @@
     "e2e": "ng e2e",
     "icons": "webpack -w",
     "postinstall": "ng build --aot -prod",
-    "start": "node server.js"
+    "start": "node server.js",
+    "DevStart": "ng serve"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +36,7 @@
     "ejs": "2.5.6",
     "express": "^4.15.3",
     "ng2-redux": "^5.1.2",
+    "ngx-bootstrap": "^1.8.1",
     "redux": "^3.7.2",
     "rxjs": "^5.1.0",
     "webpack-spritesmith": "^0.3.3",
